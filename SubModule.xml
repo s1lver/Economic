@@ -1,16 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Module>
     <Name value="Economic"/>
     <Id value="Economic"/>
-    <Version value="vX.X.X.X"/>
+    <Version value="e1.6.3"/>
     <SingleplayerModule value="true"/>
     <MultiplayerModule value="false"/>
     <Author value="s1lver" />
     <Official value="false" />
     <DependedModules>
-        <DependedModule Id="Native"/>
-        <DependedModule Id="SandBoxCore"/>
-        <DependedModule Id="Sandbox"/>
-        <DependedModule Id="StoryMode"/>
+        <DependedModule Id="Native" DependentVersion="e1.6.3"/>
+        <DependedModule Id="SandBoxCore" DependentVersion="e1.6.3"/>
+        <DependedModule Id="Sandbox" DependentVersion="e1.6.3"/>
+        <DependedModule Id="StoryMode" DependentVersion="e1.6.3"/>
     </DependedModules>
     <SubModules>
         <SubModule>
