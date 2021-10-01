@@ -2,7 +2,7 @@
 <Module>
     <Name value="Economic"/>
     <Id value="Economic"/>
-    <Version value="e1.6.3"/>
+    <Version value="e1.0.0"/>
     <SingleplayerModule value="true"/>
     <MultiplayerModule value="false"/>
     <Author value="s1lver" />
