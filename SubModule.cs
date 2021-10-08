@@ -13,7 +13,6 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.Library;
 using TaleWorlds.Library.NewsManager;
 using TaleWorlds.SaveSystem;
-using Economic;
 
 namespace Economic
 {

@@ -11,7 +11,7 @@ namespace Economic
             Random random = new Random();
             int generateValue = random.Next(1, 200);
             Hero.MainHero.Gold = heroGold + generateValue;
-            EconomicHelper.SendLogMessage("Investments generate income. Received: "+ generateValue + " Your account: " + heroGold.ToString());
+            EconomicHelper.SendLogMessage("Investments generate income. Received: " + generateValue + " Your account: " + heroGold.ToString());
         }
     }
 }
