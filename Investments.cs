@@ -5,6 +5,9 @@ namespace Economic
 {
     public class Investments
     {
-        
+        public static void Calculate()
+        {
+            
+        }
     }
 }
