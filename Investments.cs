@@ -1,17 +1,29 @@
 ﻿using System;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
 
 namespace Economic
 {
     public static class Investments
     {
-        public static void Calculate()
+        public static void Run()
         {
-            var heroGold = Hero.MainHero.Gold;
-            Random random = new Random();
-            int generateValue = random.Next(1, 200);
-            Hero.MainHero.Gold = heroGold + generateValue;
-            EconomicHelper.SendLogMessage("Investments generate income. Received: " + generateValue + " Your account: " + heroGold.ToString());
+            int calculate = Calculate();
+            Hero.MainHero.Gold = Hero.MainHero.Gold + calculate;
+            EconomicHelper.SendLogMessage("Investments generate income. Received: " + calculate);
+        }
+
+        private static int Calculate()
+        {
+            int resultReward = 0;
+            if (!Hero.MainHero.OwnedWorkshops.IsEmpty())
+            {
+                int multiplier = Hero.MainHero.OwnedWorkshops.Count;
+                int generateValue = new Random().Next(1, 200);
+                resultReward = generateValue * multiplier;
+            }
+
+            return resultReward;
         }
     }
 }

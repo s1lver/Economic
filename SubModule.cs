@@ -26,7 +26,7 @@ namespace Economic
         public override void OnGameLoaded(Game game, object initializerObject)
         {
             base.OnGameLoaded(game, initializerObject);
-            Investments.Calculate();
+            Investments.Run();
         }
     }
 }
