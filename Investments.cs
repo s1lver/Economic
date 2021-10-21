@@ -18,9 +18,17 @@ namespace Economic
             int resultReward = 0;
             if (!Hero.MainHero.OwnedWorkshops.IsEmpty())
             {
-                int multiplier = Hero.MainHero.OwnedWorkshops.Count;
-                int generateValue = new Random().Next(1, 200);
-                resultReward = generateValue * multiplier;
+                int workshopMultiplier = Hero.MainHero.OwnedWorkshops.Count;
+                foreach (var workshop in Hero.MainHero.OwnedWorkshops)
+                {
+                    if (workshop.IsRunning)
+                    {
+                        int capital = workshop.Capital / 100 * 1;
+                        workshopMultiplier += capital;
+                    }
+                }
+                int multiplier = new Random().Next(1, 10);
+                resultReward = workshopMultiplier * multiplier;
             }
 
             return resultReward;
