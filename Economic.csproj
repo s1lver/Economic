@@ -16,9 +16,6 @@
       </Reference>
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="build" />
-    </ItemGroup>
-    <ItemGroup>
       <Content Include="src\Economic.sln" />
     </ItemGroup>
 </Project>
