@@ -1,4 +1,6 @@
-﻿using TaleWorlds.Core;
+﻿using TaleWorlds.CampaignSystem;
+using TaleWorlds.Core;
+using TaleWorlds.Localization;
 
 namespace Economic
 {
@@ -9,7 +11,7 @@ namespace Economic
          */
         public static void SendLogMessage(string message)
         {
-            InformationManager.DisplayMessage(new InformationMessage(message));
+            MBInformationManager.AddQuickInformation(new TextObject(message));
         }
     }
 }
